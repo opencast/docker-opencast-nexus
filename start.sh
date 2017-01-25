@@ -1,11 +1,8 @@
 #!/bin/bash
 
 # Apply default Opencast Nexus configuration
-if [ ! -f /var/lib/nexus-oss/conf/nexus.xml ]
-then
-	mkdir -p /var/lib/nexus-oss/conf/
-	cp /nexus.xml /var/lib/nexus-oss/conf/nexus.xml
-fi
+mkdir -p /var/lib/nexus-oss/conf/
+cp /nexus.xml /var/lib/nexus-oss/conf/nexus.xml
 
 # Show login information on first start
 if [ ! -f /var/lib/nexus-oss/conf/security.xml ]
